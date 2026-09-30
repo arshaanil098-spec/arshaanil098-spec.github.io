@@ -1,0 +1,176 @@
+/* ==========================================================================
+   ARSHA ANIL — DIGITAL ATELIER DESIGN SYSTEM
+   Responsive Adaptations & Accessibility
+   ========================================================================== */
+
+/* Tablet & Smaller Screens (<= 1024px) */
+@media screen and (max-width: 1024px) {
+  .nav-links,
+  .brand-meta,
+  .nav-status {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .identity-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .profile-deck {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-editorial,
+  .project-card-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-reverse .project-info-pane {
+    order: 1;
+  }
+
+  .project-card-reverse .project-visual-pane {
+    order: 2;
+  }
+
+  .project-visual-pane {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--border-hairline);
+    min-height: 300px;
+  }
+
+  .contact-editorial-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-card-editorial {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .timeline-date-side {
+    border-right: none;
+    border-bottom: 1px solid var(--border-hairline);
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media screen and (max-width: 768px) {
+  .skills-columns-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-atelier {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cert-archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-milestones-track {
+    grid-template-columns: 1fr;
+  }
+
+  .atelier-meta-block {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .toast-notification {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    justify-content: center;
+  }
+}
+
+/* Small Handhelds (<= 480px) */
+@media screen and (max-width: 480px) {
+  .hero-name {
+    font-size: 3.2rem;
+  }
+
+  .stat-number-highlight {
+    font-size: 3.5rem;
+  }
+
+  .channel-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* Accessibility: Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Print Optimization */
+@media print {
+  .atelier-nav,
+  .grain-overlay,
+  .bg-grid-lines,
+  .nav-toggle,
+  .mobile-nav-drawer,
+  .custom-cursor-dot,
+  .custom-cursor-ring,
+  .back-to-top-btn,
+  .message-composer-card,
+  .btn-atelier {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .atelier-section {
+    padding: 2rem 0 !important;
+    page-break-inside: avoid;
+  }
+}
